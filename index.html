@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ans">
+        <h2 id="ans-text">0</h2>
+    </div>
+    <div class="frame">
+        <div class="numberframe">
+            <div class="numberrow">
+                <button class="number" onclick="numberClicked('1')">1</button>
+                <button class="number" onclick="numberClicked('2')">2</button>
+                <button class="number" onclick="numberClicked('3')">3</button>
+            </div>
+            <div class="numberrow">
+                <button class="number" onclick="numberClicked('4')">4</button>
+                <button class="number" onclick="numberClicked('5')">5</button>
+                <button class="number" onclick="numberClicked('6')">6</button>
+            </div>
+            <div class="numberrow">
+                <button class="number" onclick="numberClicked('7')">7</button>
+                <button class="number" onclick="numberClicked('8')">8</button>
+                <button class="number" onclick="numberClicked('9')">9</button>
+            </div>
+            <div class="numberrow">
+                <button class="txt" onclick="backspace()">del</button>
+                <button class="number" onclick="numberClicked('0')">0</button>
+                <button class="txt" onclick="clearAns()">clr</button>
+            </div>
+        </div>
+        <script>
+            function numberClicked(num) {
+                if (document.getElementById("ans-text").innerHTML == "0") {
+                    document.getElementById("ans-text").innerHTML = num;
+                } else {
+                    document.getElementById("ans-text").innerHTML += num;
+                }
+            }
+        </script>
+        <script>
+            function backspace() {
+                let curAns = document.getElementById("ans-text").innerHTML;
+                document.getElementById("ans-text").innerHTML = curAns.substring(0, curAns.length()-1);
+            }
+        </script>
+        <script>
+            function clear() {
+            document.getElementById("ans-text").innerHTML = "0";
+            }
+        </script>
+    </div>
+</body>
+</html>
