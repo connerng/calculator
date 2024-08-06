@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <div class="ans">
@@ -29,23 +30,13 @@
                 <button class="txt" onclick="clearAns()">clr</button>
             </div>
         </div>
-        <script>
-            function numberClicked(num) {
-                if (document.getElementById("ans-text").innerHTML == "0") {
-                    document.getElementById("ans-text").innerHTML = num;
-                } else {
-                    document.getElementById("ans-text").innerHTML += num;
-                }
-            }
-
-            function backspace() {
-                document.getElementById("ans-text").innerHTML = document.getElementById("ans-text").innerHTML.slice(0, -1);
-            }
-
-            function clearAns() {
-                document.getElementById("ans-text").innerHTML = "0";
-            }
-        </script>
+        <div class="operatorframe">
+            <button class="operator" onclick="operatorClicked('+')">+</button>
+            <button class="operator" onclick="operatorClicked('-')">-</button>
+            <button class="operator" onclick="operatorClicked('*')">*</button>
+            <button class="operator" onclick="operatorClicked('/')">/</button>
+            <button class="operator" onclick="operatorClicked('=')">=</button>
+        </div>
     </div>
 </body>
 </html>
