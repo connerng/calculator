@@ -37,16 +37,13 @@
                     document.getElementById("ans-text").innerHTML += num;
                 }
             }
-        </script>
-        <script>
+
             function backspace() {
-                let curAns = document.getElementById("ans-text").innerHTML;
-                document.getElementById("ans-text").innerHTML = curAns.substring(0, curAns.length()-1);
+                document.getElementById("ans-text").innerHTML = document.getElementById("ans-text").innerHTML.slice(0, -1);
             }
-        </script>
-        <script>
-            function clear() {
-            document.getElementById("ans-text").innerHTML = "0";
+
+            function clearAns() {
+                document.getElementById("ans-text").innerHTML = "0";
             }
         </script>
     </div>
