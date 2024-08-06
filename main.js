@@ -7,6 +7,14 @@ function isOperator(str) {
     }
 }
 
+function precedence(operator) {
+    if (operator == "*" || operator == "/") {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 function numberClicked(num) {
     if (document.getElementById("ans-text").innerHTML == "0") {
         document.getElementById("ans-text").innerHTML = num;
@@ -41,6 +49,17 @@ function evaluate() {
                 itemList.push(expression.slice(i, i+1));
             } else {
                 curItem += expression.slice(i, i+1);
+            }
+        }
+
+        stack = [];
+        postfix = [];
+        for (let i = 0; i < itemList.length(); i++) {
+            cur = itemList[i];
+            if (!isOperator(cur)) {
+                postfix.push(cur);
+            } else {
+                
             }
         }
     }
