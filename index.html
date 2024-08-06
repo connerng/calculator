@@ -4,11 +4,38 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <div class="ans">
-        <h2 id="ans-text">0</h2>
-    </div>
     <div class="frame">
-        <div class="numberframe">
+        <input id="ans-display" readonly>
+
+        <div id="buttonframe">
+            <button class="number" onclick="numberClicked('1')">1</button>
+            <button class="number" onclick="numberClicked('2')">2</button>
+            <button class="number" onclick="numberClicked('3')">3</button>
+            <button class="operator" onclick="operatorClicked('+')">+</button>
+            <button class="txt" onclick="backspace()">del</button>
+
+            <button class="number" onclick="numberClicked('4')">4</button>
+            <button class="number" onclick="numberClicked('5')">5</button>
+            <button class="number" onclick="numberClicked('6')">6</button>
+            <button class="operator" onclick="operatorClicked('-')">-</button>
+            <button class="txt" onclick="clearAns()">clr</button>
+
+            <button class="number" onclick="numberClicked('7')">7</button>
+            <button class="number" onclick="numberClicked('8')">8</button>
+            <button class="number" onclick="numberClicked('9')">9</button>
+            <button class="operator" onclick="operatorClicked('*')">*</button>
+            <button class="operator" onclick="evaluateExpression()">=</button>
+
+            <button class="filler"></button>
+            <button class="number" onclick="numberClicked('0')">0</button>
+            <button class="number" onclick="operatorClicked('.')">.</button>
+            <button class="operator" onclick="operatorClicked('/')">/</button>
+        </div>
+
+
+
+
+        <!-- <div class="numberframe">
             <div class="numberrow">
                 <button class="number" onclick="numberClicked('1')">1</button>
                 <button class="number" onclick="numberClicked('2')">2</button>
@@ -35,8 +62,8 @@
             <button class="operator" onclick="operatorClicked('-')">-</button>
             <button class="operator" onclick="operatorClicked('*')">*</button>
             <button class="operator" onclick="operatorClicked('/')">/</button>
-            <button class="operator" onclick="operatorClicked('=')">=</button>
-        </div>
+            <button class="operator" onclick="evaluateExpression()">=</button>
+        </div> -->
     </div>
 </body>
 </html>
