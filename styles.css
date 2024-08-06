@@ -19,22 +19,22 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: left;
+    box-shadow: 5px 5px 5px black;
 }
 
 /* Answer field */
 #ans-display {
     background-color: white;
     width: 500px;
-    height: 100px;
+    height: 150px;
     border-radius:0.5cm;
     text-align: right;
     text-orientation: center;
     font-family:Arial, Helvetica, sans-serif;
     font-size:1cm;
     font-weight: bold;
-    border-width: 5px;
-    border-color: black;
-    border-style: solid;
+    border: none;
+    box-shadow: 3px 3px 3px black
 }
 
 #buttonframe {
@@ -54,6 +54,8 @@ body {
     font-size:250%;
     border: none;
     cursor: pointer;
+    box-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px black;
 }
 
 .number:hover {
@@ -75,6 +77,8 @@ body {
     font-size:200%;
     border: none;
     cursor: pointer;
+    box-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px black;
 }
 
 .txt:hover {
@@ -96,6 +100,8 @@ body {
     font-size:250%;
     border: none;
     cursor: pointer;
+    box-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px black;
 }
 
 .operator:hover {
